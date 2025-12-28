@@ -5,92 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="icon" href="/assets/favicon.png" type="image/png">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
     <title>Beato's Random Picker</title>
 </head>
 <body>
     <header>
         <nav id="header-nav">
             <div id="text-icon">
-                <img 
-                src="/assets/beato-icon.png" 
-                alt="beato's icon"
-                height="35px"
-                width="35px">
+                <img src="assets/beato-icon.png" alt="beato's icon" height="35" width="35">
                 <li>Beato's Random Picker</li>
             </div>
             <div id="rest-nav">
-                <li>
-                    <button id="btn-reset">
-                    <i class="fa-solid fa-arrows-rotate" style="color: #fff;"></i>
-                    Reset
-                    </button>
-                </li>
-                <li>
-                    <button id="btn-save">
-                        <i class="fa-regular fa-floppy-disk" style="color: #fff;"></i>
-                        Save
-                    </button>
-                </li>
-                <li>
-                    <button id="btn-viewpresets">
-                        <i class="fa-regular fa-eye" style="color: #ffffff;"></i>
-                        View presets
-                    </button>
-                </li>
+                <li><button id="btn-reset">Reset</button></li>
+                <li><button id="btn-save">Save</button></li>
+                <li><button id="btn-viewpresets">View presets</button></li>
             </div>
         </nav>
     </header>
+
     <main>
         <section id="container-section">
-            <div id="text-button-container">
-                <p id="beato-p"></p>
-                <div id="button-textarea-container">
-                </div>
-            </div>
-            <div id="beato-img-container">
-                <img 
-                src="/assets/beato-normal.webp" 
-                alt="beato's normal face"
-                height="350px"
-                width="350px"
-                id="beato-normal">
-            </div>
-            <div id="text-container">
-                <p>Your list of choices:</p>
-                <div id="inputs-container">
-                </div>
-            </div>
+            <p id="beato-p"></p>
+            <img src="assets/beato-normal.webp" id="beato-normal" width="350">
+            <div id="inputs-container"></div>
         </section>
+
         <section id="enter-inputs-container">
-            <label for="text-area">Add your choices here:</label>
-            <input type="text" name="text" id="text-area">
+            <input type="text" id="text-area">
             <button id="btn-add">Add</button>
             <button id="btn-go">Let Beato decide!</button>
         </section>
+
         <div id="custom-alert">
-            <div id="content-container">
-                <div id="text-image-container">
-                    <img 
-                    src="assets/beato-happy.webp" 
-                    alt="beato-image"
-                    id="beato-alert"
-                    height="150px"
-                    width="150px">
-                    <p id="name-p">Hello, furniture! Before using this site, tell me your name, would you?</p>
-                </div>
-                <div id="textarea-container">
-                    <label for="text-name">Enter your name:</label>
-                    <input type="text" name="text-name" id="text-name">
-                    <button type="submit" id="btn-name">Submit</button>
-                </div>
-            </div>
+            <img src="assets/beato-happy.webp" id="beato-alert" width="150">
+            <input type="text" id="text-name">
+            <button id="btn-name">Submit</button>
+            <p id="name-p"></p>
         </div>
+
         <section class="preset-modal" id="preset-modal-id">
             <span id="close-modal-btn">✖</span>
             <div id="presets-container"></div>
         </section>
     </main>
+
     <audio src="assets/ahaha.wav" id="beato-laugh"></audio>
     <script src="script.js"></script>
 </body>
