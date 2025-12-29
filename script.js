@@ -114,6 +114,7 @@ function viewPresets() {
 }
 
 function renderPresets() {
+    presetContainer.innerHTML = '';
     presets.forEach((preset) => {
         const nameP = document.createElement('p');
         nameP.textContent = `Name: ${preset.name}`;
